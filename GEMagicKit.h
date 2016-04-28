@@ -30,13 +30,13 @@
 
 @interface GEMagicKit : NSObject
 
-+ (GEMagicResult *)magicForFileAtPath:(NSString *)path;
-+ (GEMagicResult *)magicForFileAtURL:(NSURL *)aURL;
-+ (GEMagicResult *)magicForData:(NSData *)data;
++ (nullable GEMagicResult *)magicForFileAtPath:(nonnull NSString *)path;
++ (nullable GEMagicResult *)magicForFileAtURL:(nonnull NSURL *)aURL;
++ (nullable GEMagicResult *)magicForData:(nonnull NSData *)data;
 
-+ (GEMagicResult *)magicForFileAtPath:(NSString *)path decompress:(BOOL)decompress;
-+ (GEMagicResult *)magicForFileAtURL:(NSURL *)aURL decompress:(BOOL)decompress;
-+ (GEMagicResult *)magicForData:(NSData *)data decompress:(BOOL)decompress;
++ (nullable GEMagicResult *)magicForFileAtPath:(nonnull NSString *)path decompress:(BOOL)decompress;
++ (nullable GEMagicResult *)magicForFileAtURL:(nonnull NSURL *)aURL decompress:(BOOL)decompress;
++ (nullable GEMagicResult *)magicForData:(nonnull NSData *)data decompress:(BOOL)decompress;
 
 @end
 

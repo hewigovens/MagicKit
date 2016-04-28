@@ -38,7 +38,7 @@
     return [self initWithMimeType:@"" description:@"" typeHierarchy:@[]];
 }
 
-- (instancetype)initWithMimeType:(NSString *)aMimeType description:(NSString *)aDescription typeHierarchy:(NSArray *)typeHierarchy {
+- (instancetype)initWithMimeType:(NSString *)aMimeType description:(NSString *)aDescription typeHierarchy:(NSArray<NSString *> *)typeHierarchy {
     self = [super init];
 	if (self) {
         _mimeType = [aMimeType copy];

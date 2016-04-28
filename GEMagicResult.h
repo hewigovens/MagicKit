@@ -28,10 +28,12 @@
 
 @interface GEMagicResult : NSObject
 
-@property (nonatomic, readonly, copy) NSString *mimeType;
-@property (nonatomic, readonly, copy) NSString *uniformType;
-@property (nonatomic, readonly, copy) NSArray *uniformTypeHierarchy;
+@property (nonatomic, readonly, copy) NSString  * _Nonnull mimeType;
+@property (nonatomic, readonly, copy) NSString * _Nonnull uniformType;
+@property (nonatomic, readonly, copy) NSArray * _Nonnull uniformTypeHierarchy;
 
-- (instancetype)initWithMimeType:(NSString *)aMimeType description:(NSString *)aDescription typeHierarchy:(NSArray *)typeHierarchy NS_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithMimeType:(nonnull NSString *)aMimeType
+                             description:(nonnull NSString *)aDescription
+                           typeHierarchy:(nonnull NSArray<NSString *> *)typeHierarchy NS_DESIGNATED_INITIALIZER;
 
 @end
