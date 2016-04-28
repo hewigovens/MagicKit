@@ -17,34 +17,34 @@
 		DD610A4512710B7B003CF804 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD610A4412710B7B003CF804 /* MobileCoreServices.framework */; };
 		DD610A6712710C90003CF804 /* MagicKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DD610A6612710C90003CF804 /* MagicKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD610A6812710C90003CF804 /* MagicKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DD610A6612710C90003CF804 /* MagicKit.h */; };
-		DDC9299A126187080012DE28 /* apprentice.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92978126187080012DE28 /* apprentice.c */; };
-		DDC9299B126187080012DE28 /* apptype.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92979126187080012DE28 /* apptype.c */; };
-		DDC9299C126187080012DE28 /* ascmagic.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC9297A126187080012DE28 /* ascmagic.c */; };
-		DDC9299D126187080012DE28 /* asprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC9297B126187080012DE28 /* asprintf.c */; };
-		DDC9299E126187080012DE28 /* cdf_time.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC9297C126187080012DE28 /* cdf_time.c */; };
-		DDC9299F126187080012DE28 /* cdf.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC9297D126187080012DE28 /* cdf.c */; };
+		DDC9299A126187080012DE28 /* apprentice.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92978126187080012DE28 /* apprentice.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC9299B126187080012DE28 /* apptype.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92979126187080012DE28 /* apptype.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC9299C126187080012DE28 /* ascmagic.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC9297A126187080012DE28 /* ascmagic.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC9299D126187080012DE28 /* asprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC9297B126187080012DE28 /* asprintf.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC9299E126187080012DE28 /* cdf_time.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC9297C126187080012DE28 /* cdf_time.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC9299F126187080012DE28 /* cdf.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC9297D126187080012DE28 /* cdf.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DDC929A0126187080012DE28 /* cdf.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC9297E126187080012DE28 /* cdf.h */; };
-		DDC929A1126187080012DE28 /* compress.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC9297F126187080012DE28 /* compress.c */; };
+		DDC929A1126187080012DE28 /* compress.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC9297F126187080012DE28 /* compress.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DDC929A2126187080012DE28 /* elfclass.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC92980126187080012DE28 /* elfclass.h */; };
-		DDC929A3126187080012DE28 /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92981126187080012DE28 /* encoding.c */; };
+		DDC929A3126187080012DE28 /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92981126187080012DE28 /* encoding.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DDC929A4126187080012DE28 /* file_opts.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC92982126187080012DE28 /* file_opts.h */; };
 		DDC929A6126187080012DE28 /* file.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC92984126187080012DE28 /* file.h */; };
-		DDC929A7126187080012DE28 /* fsmagic.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92985126187080012DE28 /* fsmagic.c */; };
-		DDC929A8126187080012DE28 /* funcs.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92986126187080012DE28 /* funcs.c */; };
-		DDC929A9126187080012DE28 /* getopt_long.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92987126187080012DE28 /* getopt_long.c */; };
-		DDC929AA126187080012DE28 /* is_tar.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92988126187080012DE28 /* is_tar.c */; };
-		DDC929AB126187080012DE28 /* magic.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92989126187080012DE28 /* magic.c */; };
+		DDC929A7126187080012DE28 /* fsmagic.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92985126187080012DE28 /* fsmagic.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC929A8126187080012DE28 /* funcs.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92986126187080012DE28 /* funcs.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC929A9126187080012DE28 /* getopt_long.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92987126187080012DE28 /* getopt_long.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC929AA126187080012DE28 /* is_tar.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92988126187080012DE28 /* is_tar.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC929AB126187080012DE28 /* magic.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92989126187080012DE28 /* magic.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DDC929AC126187080012DE28 /* magic.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC9298A126187080012DE28 /* magic.h */; };
 		DDC929AF126187080012DE28 /* mygetopt.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC9298D126187080012DE28 /* mygetopt.h */; };
-		DDC929B2126187080012DE28 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92990126187080012DE28 /* print.c */; };
-		DDC929B3126187080012DE28 /* readcdf.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92991126187080012DE28 /* readcdf.c */; };
-		DDC929B4126187080012DE28 /* readelf.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92992126187080012DE28 /* readelf.c */; };
+		DDC929B2126187080012DE28 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92990126187080012DE28 /* print.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC929B3126187080012DE28 /* readcdf.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92991126187080012DE28 /* readcdf.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC929B4126187080012DE28 /* readelf.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92992126187080012DE28 /* readelf.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DDC929B5126187080012DE28 /* readelf.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC92993126187080012DE28 /* readelf.h */; };
-		DDC929B7126187080012DE28 /* softmagic.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92995126187080012DE28 /* softmagic.c */; };
-		DDC929B8126187080012DE28 /* strlcat.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92996126187080012DE28 /* strlcat.c */; };
-		DDC929B9126187080012DE28 /* strlcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92997126187080012DE28 /* strlcpy.c */; };
+		DDC929B7126187080012DE28 /* softmagic.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92995126187080012DE28 /* softmagic.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC929B8126187080012DE28 /* strlcat.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92996126187080012DE28 /* strlcat.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DDC929B9126187080012DE28 /* strlcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92997126187080012DE28 /* strlcpy.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DDC929BA126187080012DE28 /* tar.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC92998126187080012DE28 /* tar.h */; };
-		DDC929BB126187080012DE28 /* vasprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92999126187080012DE28 /* vasprintf.c */; };
+		DDC929BB126187080012DE28 /* vasprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = DDC92999126187080012DE28 /* vasprintf.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DDC929BD1261872F0012DE28 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC929BC1261872F0012DE28 /* config.h */; };
 		DDC929DB126187CE0012DE28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
 		DDC929DF126187DA0012DE28 /* GEMagicKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC929DE126187DA0012DE28 /* GEMagicKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -419,7 +419,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "MagicKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -537,7 +537,9 @@
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -548,6 +550,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "HAVE_CONFIG_H=1";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.glassechidna.${PRODUCT_NAME:rfc1034Identifier}";
 				PRODUCT_NAME = MagicKit;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
@@ -557,7 +560,9 @@
 		1DEB91AF08733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -566,6 +571,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "HAVE_CONFIG_H=1";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.glassechidna.${PRODUCT_NAME:rfc1034Identifier}";
 				PRODUCT_NAME = MagicKit;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
@@ -575,8 +581,8 @@
 		1DEB91B208733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -589,7 +595,6 @@
 		1DEB91B308733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -641,7 +646,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = armv7;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -656,7 +660,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = armv7;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "HAVE_CONFIG_H=1";

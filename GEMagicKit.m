@@ -51,7 +51,7 @@
 
         const char *magicFile;
 #if TARGET_OS_MAC && !(TARGET_OS_IPHONE)
-        magicFile = [[[NSBundle bundleForClass:[self class]] pathForResource:@"magic" ofType:@"mgc"] fileSystemRepresentation];
+        magicFile = [[NSBundle bundleForClass:[self class]] pathForResource:@"magic" ofType:@"mgc"].fileSystemRepresentation;
 #else
         magicFile = [[[NSBundle mainBundle] pathForResource:@"magic" ofType:@"mgc"] fileSystemRepresentation];
 #endif
@@ -75,15 +75,15 @@
     if (!description || !mimeType)
         return nil;
     
-    NSString *plainMimeType = [[mimeType componentsSeparatedByString:@";"] objectAtIndex:0];
-    NSString *typeIdentifier = [NSMakeCollectable(UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (CFStringRef)plainMimeType, NULL)) autorelease];
-    NSArray *typeHierarchy = [[NSArray arrayWithObject:typeIdentifier] arrayByAddingObjectsFromArray:[GEMagicKit typeHierarchyForType:typeIdentifier]];
+    NSString *plainMimeType = [mimeType componentsSeparatedByString:@";"][0];
+    NSString *typeIdentifier = (__bridge_transfer NSString*)(UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)plainMimeType, NULL));
+    NSArray *typeHierarchy = [@[typeIdentifier] arrayByAddingObjectsFromArray:[GEMagicKit typeHierarchyForType:typeIdentifier]];
     
     GEMagicResult *result = [[GEMagicResult alloc] initWithMimeType:mimeType 
                                                         description:description 
                                                       typeHierarchy:typeHierarchy];
     
-    return [result autorelease];
+    return result;
 }
 
 + (NSString *)rawMagicOutputForObject:(id)dataOrFilePath cookie:(magic_t)cookie flags:(int)flags {
@@ -98,14 +98,14 @@
         [NSException raise:@"MagicKit" format:@"Invalid object (expected data or path string): %@", dataOrFilePath];
     }
 
-    return rawOutput ? [NSString stringWithUTF8String:rawOutput] : nil;
+    return rawOutput ? @(rawOutput) : nil;
 }
 
 + (NSArray *)typeHierarchyForType:(NSString *)uniformType {
     NSArray *typeHierarchy = nil;
     
-    NSDictionary *typeDeclaration = [NSMakeCollectable(UTTypeCopyDeclaration((CFStringRef)uniformType)) autorelease];
-    id superTypes = [typeDeclaration objectForKey:(NSString *)kUTTypeConformsToKey];
+    NSDictionary *typeDeclaration = (__bridge_transfer NSDictionary*) UTTypeCopyDeclaration((__bridge CFStringRef)uniformType);
+    id superTypes = typeDeclaration[(NSString *)kUTTypeConformsToKey];
     
     if ([superTypes isKindOfClass:[NSArray class]]) {
         NSMutableArray *mutableTypeHierarchy = [NSMutableArray arrayWithArray:superTypes];
@@ -115,7 +115,7 @@
 
         typeHierarchy = mutableTypeHierarchy;
     } else if ([superTypes isKindOfClass:[NSString class]]) {
-        typeHierarchy = [NSArray arrayWithObject:superTypes];
+        typeHierarchy = @[superTypes];
     }
     
     return typeHierarchy;
@@ -141,8 +141,8 @@
 }
 
 + (GEMagicResult *)magicForFileAtURL:(NSURL *)aURL decompress:(BOOL)decompress {
-	if ([aURL isFileURL]) {
-		return [GEMagicKit magicForFileAtPath:[aURL path] decompress:decompress];
+	if (aURL.fileURL) {
+		return [GEMagicKit magicForFileAtPath:aURL.path decompress:decompress];
 	} else {
 		return nil;
 	}
