@@ -110,8 +110,9 @@
     if ([superTypes isKindOfClass:[NSArray class]]) {
         NSMutableArray *mutableTypeHierarchy = [NSMutableArray arrayWithArray:superTypes];
         
-        for (NSString *superType in superTypes)
+        for (NSString *superType in superTypes) {
             [mutableTypeHierarchy addObjectsFromArray:[GEMagicKit typeHierarchyForType:superType]];
+        }
 
         typeHierarchy = mutableTypeHierarchy;
     } else if ([superTypes isKindOfClass:[NSString class]]) {

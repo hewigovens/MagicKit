@@ -29,7 +29,7 @@
 @property (nonatomic, readwrite, copy) NSString *mimeType;
 @property (nonatomic, readwrite, copy) NSString *_description;
 @property (nonatomic, readwrite, copy) NSString *uniformType;
-@property (nonatomic, readwrite, copy) NSArray *uniformTypeHierarchy;
+@property (nonatomic, readwrite, copy) NSArray<NSString *> *uniformTypeHierarchy;
 @end
 
 @implementation GEMagicResult
