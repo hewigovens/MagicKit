@@ -27,7 +27,7 @@
 
 @interface GEMagicResult ()
 @property (nonatomic, readwrite, copy) NSString *mimeType;
-@property (nonatomic, readwrite, copy) NSString *_description;
+@property (nonatomic, readwrite, copy) NSString *desc;
 @property (nonatomic, readwrite, copy) NSString *uniformType;
 @property (nonatomic, readwrite, copy) NSArray<NSString *> *uniformTypeHierarchy;
 @end
@@ -38,11 +38,13 @@
     return [self initWithMimeType:@"" description:@"" typeHierarchy:@[]];
 }
 
-- (instancetype)initWithMimeType:(NSString *)aMimeType description:(NSString *)aDescription typeHierarchy:(NSArray<NSString *> *)typeHierarchy {
+- (instancetype)initWithMimeType:(NSString *)mimeType
+                     description:(NSString *)description
+                   typeHierarchy:(NSArray<NSString *> *)typeHierarchy {
     self = [super init];
 	if (self) {
-        _mimeType = [aMimeType copy];
-        __description = [aDescription copy];
+        _mimeType = [mimeType copy];
+        _desc = [description copy];
         _uniformTypeHierarchy = [typeHierarchy copy];
         if (self.uniformTypeHierarchy.count) {
             _uniformType = (self.uniformTypeHierarchy)[0];
@@ -52,7 +54,12 @@
 }
 
 - (NSString *)description {
-    return self._description;
+    NSMutableString *desc = [NSMutableString stringWithFormat:@"GEMagicResult: {\n"];
+    [desc appendFormat:@"\t%@\n", self.mimeType];
+    [desc appendFormat:@"\t%@\n", self.desc];
+    [desc appendFormat:@"\t%@\n", self.uniformTypeHierarchy];
+    [desc appendString:@"}"];
+    return [NSString stringWithString:desc];
 }
 
 @end

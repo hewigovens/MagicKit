@@ -30,10 +30,11 @@
 
 @property (nonatomic, readonly, copy) NSString  * _Nonnull mimeType;
 @property (nonatomic, readonly, copy) NSString * _Nonnull uniformType;
+@property (nonatomic, readonly, copy) NSString * _Nonnull desc;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull uniformTypeHierarchy;
 
-- (nonnull instancetype)initWithMimeType:(nonnull NSString *)aMimeType
-                             description:(nonnull NSString *)aDescription
+- (nonnull instancetype)initWithMimeType:(nonnull NSString *)mimeType
+                             description:(nonnull NSString *)description
                            typeHierarchy:(nonnull NSArray<NSString *> *)typeHierarchy NS_DESIGNATED_INITIALIZER;
 
 @end
