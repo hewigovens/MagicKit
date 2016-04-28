@@ -26,17 +26,12 @@
 #import <Foundation/Foundation.h>
 #import <MagicKit/MagicKit.h>
 
-@interface GEMagicResult : NSObject {
-    NSString *mimeType;
-    NSString *description;
-    NSString *uniformType;
-    NSArray *uniformTypeHierarchy;
-}
+@interface GEMagicResult : NSObject
 
-- (instancetype)initWithMimeType:(NSString *)aMimeType description:(NSString *)aDescription typeHierarchy:(NSArray *)typeHierarchy NS_DESIGNATED_INITIALIZER;
 @property (nonatomic, readonly, copy) NSString *mimeType;
-@property (nonatomic, readonly, copy) NSString *description;
 @property (nonatomic, readonly, copy) NSString *uniformType;
 @property (nonatomic, readonly, copy) NSArray *uniformTypeHierarchy;
+
+- (instancetype)initWithMimeType:(NSString *)aMimeType description:(NSString *)aDescription typeHierarchy:(NSArray *)typeHierarchy NS_DESIGNATED_INITIALIZER;
 
 @end

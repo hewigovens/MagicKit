@@ -25,24 +25,34 @@
 
 #import "GEMagicResult.h"
 
+@interface GEMagicResult ()
+@property (nonatomic, readwrite, copy) NSString *mimeType;
+@property (nonatomic, readwrite, copy) NSString *_description;
+@property (nonatomic, readwrite, copy) NSString *uniformType;
+@property (nonatomic, readwrite, copy) NSArray *uniformTypeHierarchy;
+@end
+
 @implementation GEMagicResult
 
-@synthesize mimeType;
-@synthesize description;
-@synthesize uniformType;
-@synthesize uniformTypeHierarchy;
+- (instancetype)init {
+    return [self initWithMimeType:@"" description:@"" typeHierarchy:@[]];
+}
 
 - (instancetype)initWithMimeType:(NSString *)aMimeType description:(NSString *)aDescription typeHierarchy:(NSArray *)typeHierarchy {
     self = [super init];
 	if (self) {
-        mimeType = [aMimeType copy];
-        description = [aDescription copy];
-        uniformTypeHierarchy = [typeHierarchy copy];
-        if (self.uniformTypeHierarchy.count)
-            uniformType = (self.uniformTypeHierarchy)[0];
+        _mimeType = [aMimeType copy];
+        __description = [aDescription copy];
+        _uniformTypeHierarchy = [typeHierarchy copy];
+        if (self.uniformTypeHierarchy.count) {
+            _uniformType = (self.uniformTypeHierarchy)[0];
+        }
     }
     return self;
 }
 
+- (NSString *)description {
+    return self._description;
+}
 
 @end
