@@ -11,6 +11,17 @@
 		3DCAEFE6162D8BDE0036D9BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCAEFE5162D8BDE0036D9BF /* Foundation.framework */; };
 		3DCAF01C162D9C520036D9BF /* magic.mgc in Resources */ = {isa = PBXBuildFile; fileRef = 3DCAF01B162D9C520036D9BF /* magic.mgc */; };
 		5F4F51871551FFD300248063 /* GEMagicResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DD610A1E1271094B003CF804 /* GEMagicResult.m */; };
+		BB3D7CE31CD580DD000523EF /* ctime_r.c in Sources */ = {isa = PBXBuildFile; fileRef = BB3D7CD81CD580DD000523EF /* ctime_r.c */; };
+		BB3D7CE41CD580DD000523EF /* asctime_r.c in Sources */ = {isa = PBXBuildFile; fileRef = BB3D7CD91CD580DD000523EF /* asctime_r.c */; };
+		BB3D7CE51CD580DD000523EF /* pread.c in Sources */ = {isa = PBXBuildFile; fileRef = BB3D7CDA1CD580DD000523EF /* pread.c */; };
+		BB3D7CE61CD580DD000523EF /* gmtime_r.c in Sources */ = {isa = PBXBuildFile; fileRef = BB3D7CDB1CD580DD000523EF /* gmtime_r.c */; };
+		BB3D7CE71CD580DD000523EF /* localtime_r.c in Sources */ = {isa = PBXBuildFile; fileRef = BB3D7CDC1CD580DD000523EF /* localtime_r.c */; };
+		BB3D7CE81CD580DD000523EF /* der.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3D7CDD1CD580DD000523EF /* der.h */; };
+		BB3D7CE91CD580DD000523EF /* dprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = BB3D7CDE1CD580DD000523EF /* dprintf.c */; };
+		BB3D7CEA1CD580DD000523EF /* getline.c in Sources */ = {isa = PBXBuildFile; fileRef = BB3D7CDF1CD580DD000523EF /* getline.c */; };
+		BB3D7CEB1CD580DD000523EF /* strcasestr.c in Sources */ = {isa = PBXBuildFile; fileRef = BB3D7CE01CD580DD000523EF /* strcasestr.c */; };
+		BB3D7CEC1CD580DD000523EF /* fmtcheck.c in Sources */ = {isa = PBXBuildFile; fileRef = BB3D7CE11CD580DD000523EF /* fmtcheck.c */; };
+		BB3D7CED1CD580DD000523EF /* der.c in Sources */ = {isa = PBXBuildFile; fileRef = BB3D7CE21CD580DD000523EF /* der.c */; };
 		DD2BBE3D1262DBD3001B55D4 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD2BBE3C1262DBD3001B55D4 /* CoreServices.framework */; };
 		DD610A1F1271094B003CF804 /* GEMagicResult.h in Headers */ = {isa = PBXBuildFile; fileRef = DD610A1D1271094B003CF804 /* GEMagicResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD610A201271094B003CF804 /* GEMagicResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DD610A1E1271094B003CF804 /* GEMagicResult.m */; };
@@ -98,6 +109,17 @@
 		3DCAF01B162D9C520036D9BF /* magic.mgc */ = {isa = PBXFileReference; lastKnownFileType = file; path = magic.mgc; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* MagicKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MagicKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB3D7CD81CD580DD000523EF /* ctime_r.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ctime_r.c; path = libmagic/ctime_r.c; sourceTree = "<group>"; };
+		BB3D7CD91CD580DD000523EF /* asctime_r.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = asctime_r.c; path = libmagic/asctime_r.c; sourceTree = "<group>"; };
+		BB3D7CDA1CD580DD000523EF /* pread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pread.c; path = libmagic/pread.c; sourceTree = "<group>"; };
+		BB3D7CDB1CD580DD000523EF /* gmtime_r.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gmtime_r.c; path = libmagic/gmtime_r.c; sourceTree = "<group>"; };
+		BB3D7CDC1CD580DD000523EF /* localtime_r.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = localtime_r.c; path = libmagic/localtime_r.c; sourceTree = "<group>"; };
+		BB3D7CDD1CD580DD000523EF /* der.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = der.h; path = libmagic/der.h; sourceTree = "<group>"; };
+		BB3D7CDE1CD580DD000523EF /* dprintf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dprintf.c; path = libmagic/dprintf.c; sourceTree = "<group>"; };
+		BB3D7CDF1CD580DD000523EF /* getline.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = getline.c; path = libmagic/getline.c; sourceTree = "<group>"; };
+		BB3D7CE01CD580DD000523EF /* strcasestr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strcasestr.c; path = libmagic/strcasestr.c; sourceTree = "<group>"; };
+		BB3D7CE11CD580DD000523EF /* fmtcheck.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fmtcheck.c; path = libmagic/fmtcheck.c; sourceTree = "<group>"; };
+		BB3D7CE21CD580DD000523EF /* der.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = der.c; path = libmagic/der.c; sourceTree = "<group>"; };
 		DD2BBE3C1262DBD3001B55D4 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		DD610A1D1271094B003CF804 /* GEMagicResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMagicResult.h; sourceTree = "<group>"; };
 		DD610A1E1271094B003CF804 /* GEMagicResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMagicResult.m; sourceTree = "<group>"; };
@@ -271,6 +293,17 @@
 		DDC92977126186FD0012DE28 /* libmagic */ = {
 			isa = PBXGroup;
 			children = (
+				BB3D7CD81CD580DD000523EF /* ctime_r.c */,
+				BB3D7CD91CD580DD000523EF /* asctime_r.c */,
+				BB3D7CDA1CD580DD000523EF /* pread.c */,
+				BB3D7CDB1CD580DD000523EF /* gmtime_r.c */,
+				BB3D7CDC1CD580DD000523EF /* localtime_r.c */,
+				BB3D7CDD1CD580DD000523EF /* der.h */,
+				BB3D7CDE1CD580DD000523EF /* dprintf.c */,
+				BB3D7CDF1CD580DD000523EF /* getline.c */,
+				BB3D7CE01CD580DD000523EF /* strcasestr.c */,
+				BB3D7CE11CD580DD000523EF /* fmtcheck.c */,
+				BB3D7CE21CD580DD000523EF /* der.c */,
 				3DCAF01B162D9C520036D9BF /* magic.mgc */,
 				DDC929BC1261872F0012DE28 /* config.h */,
 				DDC92978126187080012DE28 /* apprentice.c */,
@@ -343,6 +376,7 @@
 				DDC929BA126187080012DE28 /* tar.h in Headers */,
 				DDC929BD1261872F0012DE28 /* config.h in Headers */,
 				DDC929DF126187DA0012DE28 /* GEMagicKit.h in Headers */,
+				BB3D7CE81CD580DD000523EF /* der.h in Headers */,
 				DD610A1F1271094B003CF804 /* GEMagicResult.h in Headers */,
 				DD610A6712710C90003CF804 /* MagicKit.h in Headers */,
 			);
@@ -469,23 +503,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDC9299A126187080012DE28 /* apprentice.c in Sources */,
+				BB3D7CE61CD580DD000523EF /* gmtime_r.c in Sources */,
 				DDC9299B126187080012DE28 /* apptype.c in Sources */,
 				DDC9299C126187080012DE28 /* ascmagic.c in Sources */,
+				BB3D7CE41CD580DD000523EF /* asctime_r.c in Sources */,
 				DDC9299D126187080012DE28 /* asprintf.c in Sources */,
 				DDC9299E126187080012DE28 /* cdf_time.c in Sources */,
 				DDC9299F126187080012DE28 /* cdf.c in Sources */,
 				DDC929A1126187080012DE28 /* compress.c in Sources */,
+				BB3D7CE91CD580DD000523EF /* dprintf.c in Sources */,
 				DDC929A3126187080012DE28 /* encoding.c in Sources */,
 				DDC929A7126187080012DE28 /* fsmagic.c in Sources */,
 				DDC929A8126187080012DE28 /* funcs.c in Sources */,
+				BB3D7CEB1CD580DD000523EF /* strcasestr.c in Sources */,
+				BB3D7CE51CD580DD000523EF /* pread.c in Sources */,
 				DDC929A9126187080012DE28 /* getopt_long.c in Sources */,
 				DDC929AA126187080012DE28 /* is_tar.c in Sources */,
+				BB3D7CED1CD580DD000523EF /* der.c in Sources */,
 				DDC929AB126187080012DE28 /* magic.c in Sources */,
 				DDC929B2126187080012DE28 /* print.c in Sources */,
 				DDC929B3126187080012DE28 /* readcdf.c in Sources */,
 				DDC929B4126187080012DE28 /* readelf.c in Sources */,
 				DDC929B7126187080012DE28 /* softmagic.c in Sources */,
+				BB3D7CEC1CD580DD000523EF /* fmtcheck.c in Sources */,
 				DDC929B8126187080012DE28 /* strlcat.c in Sources */,
+				BB3D7CEA1CD580DD000523EF /* getline.c in Sources */,
+				BB3D7CE71CD580DD000523EF /* localtime_r.c in Sources */,
+				BB3D7CE31CD580DD000523EF /* ctime_r.c in Sources */,
 				DDC929B9126187080012DE28 /* strlcpy.c in Sources */,
 				DDC929BB126187080012DE28 /* vasprintf.c in Sources */,
 				DDC92B6F12618E120012DE28 /* GEMagicKit.m in Sources */,
@@ -550,6 +594,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "HAVE_CONFIG_H=1";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
+				OTHER_CFLAGS = "-DHAVE_STDDEF_H";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.glassechidna.${PRODUCT_NAME:rfc1034Identifier}";
 				PRODUCT_NAME = MagicKit;
 				SKIP_INSTALL = YES;
@@ -571,6 +616,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "HAVE_CONFIG_H=1";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
+				OTHER_CFLAGS = "-DHAVE_STDDEF_H";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.glassechidna.${PRODUCT_NAME:rfc1034Identifier}";
 				PRODUCT_NAME = MagicKit;
 				SKIP_INSTALL = YES;
@@ -583,7 +629,6 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -596,7 +641,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;

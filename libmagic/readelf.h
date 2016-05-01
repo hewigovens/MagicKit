@@ -44,22 +44,50 @@ typedef uint16_t	Elf32_Half;
 typedef uint32_t	Elf32_Word;
 typedef uint8_t		Elf32_Char;
 
-#if SIZEOF_LONG_LONG != 8
-#define	USE_ARRAY_FOR_64BIT_TYPES
-typedef	uint32_t 	Elf64_Addr[2];
-typedef	uint32_t 	Elf64_Off[2];
-typedef uint32_t 	Elf64_Xword[2];
-#else
-#undef USE_ARRAY_FOR_64BIT_TYPES
 typedef	uint64_t 	Elf64_Addr;
 typedef	uint64_t 	Elf64_Off;
 typedef uint64_t 	Elf64_Xword;
-#endif
 typedef uint16_t	Elf64_Half;
 typedef uint32_t	Elf64_Word;
 typedef uint8_t		Elf64_Char;
 
 #define	EI_NIDENT	16
+
+typedef struct {
+	Elf32_Word	a_type;		/* 32-bit id */
+	Elf32_Word	a_v;		/* 32-bit id */
+} Aux32Info;
+
+typedef struct {
+	Elf64_Xword	a_type;		/* 64-bit id */
+	Elf64_Xword	a_v;		/* 64-bit id */
+} Aux64Info;
+
+#define AT_NULL   0     /* end of vector */
+#define AT_IGNORE 1     /* entry should be ignored */
+#define AT_EXECFD 2     /* file descriptor of program */
+#define AT_PHDR   3     /* program headers for program */
+#define AT_PHENT  4     /* size of program header entry */
+#define AT_PHNUM  5     /* number of program headers */
+#define AT_PAGESZ 6     /* system page size */
+#define AT_BASE   7     /* base address of interpreter */
+#define AT_FLAGS  8     /* flags */
+#define AT_ENTRY  9     /* entry point of program */
+#define AT_LINUX_NOTELF 10    /* program is not ELF */
+#define AT_LINUX_UID    11    /* real uid */
+#define AT_LINUX_EUID   12    /* effective uid */
+#define AT_LINUX_GID    13    /* real gid */
+#define AT_LINUX_EGID   14    /* effective gid */
+#define AT_LINUX_PLATFORM 15  /* string identifying CPU for optimizations */
+#define AT_LINUX_HWCAP  16    /* arch dependent hints at CPU capabilities */
+#define AT_LINUX_CLKTCK 17    /* frequency at which times() increments */
+/* AT_* values 18 through 22 are reserved */
+#define AT_LINUX_SECURE 23   /* secure mode boolean */
+#define AT_LINUX_BASE_PLATFORM 24     /* string identifying real platform, may
+                                 * differ from AT_PLATFORM. */
+#define AT_LINUX_RANDOM 25    /* address of 16 random bytes */
+#define AT_LINUX_HWCAP2 26    /* extension of AT_HWCAP */
+#define AT_LINUX_EXECFN 31   /* filename of program */
 
 typedef struct {
     Elf32_Char	e_ident[EI_NIDENT];
@@ -263,6 +291,46 @@ typedef struct {
  */
 #define	NT_GNU_BUILD_ID		3
 
+/*
+ * NetBSD-specific note type: PaX.
+ * There should be 1 NOTE per executable.
+ * name: PaX\0
+ * namesz: 4
+ * desc:
+ *	word[0]: capability bitmask
+ * descsz: 4
+ */
+#define NT_NETBSD_PAX		3
+#define NT_NETBSD_PAX_MPROTECT		0x01	/* Force enable Mprotect */
+#define NT_NETBSD_PAX_NOMPROTECT	0x02	/* Force disable Mprotect */
+#define NT_NETBSD_PAX_GUARD		0x04	/* Force enable Segvguard */
+#define NT_NETBSD_PAX_NOGUARD		0x08	/* Force disable Servguard */
+#define NT_NETBSD_PAX_ASLR		0x10	/* Force enable ASLR */
+#define NT_NETBSD_PAX_NOASLR		0x20	/* Force disable ASLR */
+
+/*
+ * NetBSD-specific note type: MACHINE_ARCH.
+ * There should be 1 NOTE per executable.
+ * name:	NetBSD\0
+ * namesz:	7
+ * desc:	string
+ * descsz:	variable
+ */
+#define NT_NETBSD_MARCH		5
+
+/*
+ * NetBSD-specific note type: COMPILER MODEL.
+ * There should be 1 NOTE per executable.
+ * name:	NetBSD\0
+ * namesz:	7
+ * desc:	string
+ * descsz:	variable
+ */
+#define NT_NETBSD_CMODEL	6
+
+#if !defined(ELFSIZE) && defined(ARCH_ELFSIZE)
+#define ELFSIZE ARCH_ELFSIZE
+#endif
 /* SunOS 5.x hardware/software capabilities */
 typedef struct {
 	Elf32_Word	c_tag;
